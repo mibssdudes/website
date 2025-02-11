@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube-like Homepage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff0000;
+            color: white;
+            padding: 16px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar input {
+            padding: 8px;
+            border: none;
+            width: 300px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .search-bar button {
+            padding: 8px 16px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .video-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+            padding: 16px;
+        }
+
+        .video {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .video:hover {
+            transform: translateY(-5px);
+        }
+
+        .video img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video h3 {
+            font-size: 1.1rem;
+            padding: 8px;
+            margin: 0;
+            color: #333;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 16px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        footer a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- This is where the Title of the Website goes -->
+    <header>
+        <div class="logo">
+            <h1>My YouTube Homepage</h1> <!-- Change this title to whatever you want! -->
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for videos">
+            <button onclick="searchClicked()">Search</button>
+        </div>
+    </header>
+
+    <!-- This is the Video Section: You can add or change videos below -->
+    <section class="video-section">
+
+        <!-- Video 1 -->
+        <div class="video" onclick="window.location.href='password.html'">
+            <img src="https://via.placeholder.com/300x200" alt="Video Thumbnail"> <!-- Change the image link here -->
+            <h3>My First Awesome Video</h3> <!-- Change the video title here -->
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video" onclick="window.location.href='password.html'">
+            <img src="https://via.placeholder.com/300x200" alt="Video Thumbnail"> <!-- Change the image link here -->
+            <h3>Another Fun Video!</h3> <!-- Change the video title here -->
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video" onclick="window.location.href='password.html'">
+            <img src="https://via.placeholder.com/300x200" alt="Video Thumbnail"> <!-- Change the image link here -->
+            <h3>Building My Secret Fort</h3> <!-- Change the video title here -->
+        </div>
+
+    </section>
+
+    <!-- Footer: Where you can add extra links or information -->
+    <footer>
+        <a href="#">About</a>
+        <a href="#">Help</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+    </footer>
+
+    <!-- Code that runs when the Search Button is clicked -->
+    <script>
+        let clickCount = 0;
+
+        // This function counts how many times the search button is clicked.
+        // If clicked 5 times, it sends to another page (like a password page)
+        function searchClicked() {
+            clickCount++;
+            if (clickCount >= 5) {
+                window.location.href = 'password.html'; // Change this to a page you want to send them to
+            }
+        }
+    </script>
+
+</body>
+</html>
